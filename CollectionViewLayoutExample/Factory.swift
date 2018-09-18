@@ -22,14 +22,14 @@ protocol Factory {
 struct CenterZoomLayoutFactory: Factory {
     
     func create() -> CollectionViewLayoutItem {
-        let horizontalLayout = CenterZoomCollectionViewLayout()
+        let horizontalLayout = LinearCenterZoomCollectionViewLayout()
         horizontalLayout.scrollDirection = .horizontal
         horizontalLayout.minimumInteritemSpacing = 10
         horizontalLayout.minimumLineSpacing = 10
         horizontalLayout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         horizontalLayout.itemSize = CGSize(width: 300, height: 200)
         
-        let verticalLayout = CenterZoomCollectionViewLayout()
+        let verticalLayout = LinearCenterZoomCollectionViewLayout()
         verticalLayout.scrollDirection = .vertical
         verticalLayout.minimumInteritemSpacing = 10
         verticalLayout.minimumLineSpacing = 10

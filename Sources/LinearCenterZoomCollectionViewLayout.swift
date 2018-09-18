@@ -1,5 +1,5 @@
 //
-//  CenterZoomCollectionViewLayout.swift
+//  LinearCenterZoomCollectionViewLayout.swift
 //  CollectionViewLayoutExample
 //
 //  Created by Naver on 2018. 8. 30..
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class CenterZoomCollectionViewLayout: CollectionViewFlowLayout {
+public class LinearCenterZoomCollectionViewLayout: CollectionViewFlowLayout {
     
     public var minimumScaleFactor: CGFloat = 0.8
     
