@@ -31,10 +31,6 @@ public class LinearCenterZoomCollectionViewLayout: CollectionViewFlowLayout {
         return true
     }
     
-    override public func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
-        return super.targetContentOffset(forProposedContentOffset: proposedContentOffset, withScrollingVelocity: velocity)
-    }
-    
     override public func transformAttributesForHorizontal(attributes: UICollectionViewLayoutAttributes?) -> UICollectionViewLayoutAttributes? {
         guard let collectionView = self.collectionView else { return attributes }
         guard let attributes = super.transformAttributesForHorizontal(attributes: attributes) else { return nil }
