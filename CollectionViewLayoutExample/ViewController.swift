@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     let types: [CollectionViewLayoutType] = [
         .centerZoom,
+        .stairs,
     ]
     
     override func viewDidLoad() {

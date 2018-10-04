@@ -11,11 +11,13 @@ import UIKit
 enum CollectionViewLayoutType: String {
     
     case centerZoom
+    case stairs
     
     var item: CollectionViewLayoutItem {
         let factory: Factory
         switch self {
         case .centerZoom: factory = CenterZoomLayoutFactory()
+        case .stairs: factory = StairsCollectionViewLayoutFactory()
         }
         
         return factory.create()
@@ -53,6 +55,9 @@ extension CollectionViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell
+        
+        cell?.layer.borderWidth = 1
+        cell?.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         return cell ?? CollectionViewCell()
     }

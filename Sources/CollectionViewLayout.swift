@@ -10,6 +10,10 @@ import UIKit
 
 public class CollectionViewLayout: UICollectionViewLayout {
     
+    override public class var layoutAttributesClass: AnyClass {
+        return CollectionViewLayoutAttributes.self
+    }
+    
     override public func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let attributesList = super.layoutAttributesForElements(in: rect)
         return attributesList?.compactMap(transformAttributes)
@@ -21,6 +25,10 @@ public class CollectionViewLayout: UICollectionViewLayout {
 }
 
 public class CollectionViewFlowLayout: UICollectionViewFlowLayout {
+    
+    override public class var layoutAttributesClass: AnyClass {
+        return CollectionViewLayoutAttributes.self
+    }
     
     override public func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let attributesList = super.layoutAttributesForElements(in: rect)
